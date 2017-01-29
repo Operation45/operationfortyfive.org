@@ -10,9 +10,14 @@ html {
 
 body {
   align-items: center;
+  background-image: url('op45-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   display: flex;
   font-family: monospace;
   height: 100%;
+  margin: 0;
 }
 
 main {
@@ -20,7 +25,22 @@ main {
   color: white;
   margin: 0 auto;
   padding: 2rem;
-  width: 450px;
+  width: 30%;
+}
+
+@media all and (max-width: 500px) {
+  body {
+    width: 100%;
+  }
+
+  main {
+    margin: 0;
+    width: 100%;
+  }
+
+  input {
+    width: 100% !important;
+  }
 }
 
 h1, h2, h3 {
@@ -42,4 +62,19 @@ input[type="email"] {
   margin-bottom: 1rem;
   padding: 1rem .5rem;
   width: 100%;
+}
+
+input[type="submit"] {
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 0;
+  color: white;
+  font-size: 1rem;
+  padding: .7rem .3rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #333;
+  color: lightgrey;
+  cursor: pointer;
 }
