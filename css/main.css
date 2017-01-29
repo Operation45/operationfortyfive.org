@@ -1,3 +1,6 @@
+---
+---
+
 * {
   box-sizing: border-box;
   font-family: monospace;
@@ -10,7 +13,7 @@ html {
 
 body {
   align-items: center;
-  background-image: url('op45-bg.jpg');
+  background-image: url({{ '/images/background.jpg' | prepend: site.baseurl }});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -75,4 +78,11 @@ input[type="submit"]:hover {
   background-color: #333;
   color: lightgrey;
   cursor: pointer;
+}
+
+a[href$='privacy'] {
+  bottom: 2rem;
+  color: white;
+  position: absolute;
+  left: 45%;
 }
