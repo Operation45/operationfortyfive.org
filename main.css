@@ -25,21 +25,18 @@ main {
   color: white;
   margin: 0 auto;
   padding: 2rem;
-  width: 30%;
+  width: 45%;
+}
+
+@media all and (max-width: 1000px) and (min-width: 501px) {
+  main {
+    width: 60%;
+  }
 }
 
 @media all and (max-width: 500px) {
-  body {
-    width: 100%;
-  }
-
   main {
-    margin: 0;
-    width: 100%;
-  }
-
-  input {
-    width: 100% !important;
+    width: 90%;
   }
 }
 
@@ -48,6 +45,7 @@ h1, h2, h3 {
 }
 
 #mc_embed_signup {
+  width: 100%;
 }
 
 label {
