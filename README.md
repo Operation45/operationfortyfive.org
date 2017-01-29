@@ -1,8 +1,8 @@
 # operationfortyfive.org
 
-![](operation45.png)
+![](./images/logo.png)
 
-Operation 45: Transparency and Accountability for the Administration of Donald J. Trump, our soon-to-be 45th President.
+Operation 45: Transparency and Accountability for the Administration of Donald J. Trump, the 45th President.
 
 "Transparency luminaries" Ryan Shapiro and Jeffrey Light  have for years exposed government secrecy and overreach at the FBI, CIA, NSA, and numerous other agencies.
 
