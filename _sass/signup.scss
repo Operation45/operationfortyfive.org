@@ -1,0 +1,75 @@
+label {
+  display: none;
+}
+
+input[type="email"] {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding: 1rem .5rem;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 0;
+  color: white;
+  font-size: 1rem;
+  padding: .7rem .3rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #333;
+  color: lightgrey;
+  cursor: pointer;
+}
+
+a[href$='privacy'] {
+  bottom: 2rem;
+  color: white;
+  position: absolute;
+  left: 45%;
+
+  @media all and (max-width: $breakpoint) {
+    display: block;
+    left: 0;
+    margin-top: 4rem;
+    position: relative;
+    text-align: center;
+  }
+}
+
+.signup {
+  background-image: url($baseurl + "/images/redacted-texbox-bg.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  color: white;
+  height: 441px;
+  margin: 0 auto;
+  margin-top: 9rem;
+  width: 38rem;
+
+  @media all and (max-width: $breakpoint) {
+    background-color: black;
+    height: auto;
+    margin-top: 7rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  > div {
+    margin-left: 70px;
+    padding-top: 80px;
+    width: 460px;
+
+    @media all and (max-width: $breakpoint) {
+      margin: 0 auto;
+      padding: 0;
+      width: 80%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+---
+
+---
+
+$baseurl: "{{ site.baseurl }}";
+$breakpoint: 650px;
+
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  background-image: url($baseurl + "/images/background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: monospace;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-weight: 100;
+}
+
+@import 'page';
+@import 'signup';
