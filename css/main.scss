@@ -2,12 +2,16 @@
 
 ---
 
-$baseurl: "{{ site.baseurl }}";
+$baseurl: '{{ site.baseurl }}';
 $breakpoint: 650px;
+
+@font-face {
+  font-family: 'PitchLight';
+  src: url($baseurl + '/fonts/Pitch-Light.otf') format('opentype');
+}
 
 * {
   box-sizing: border-box;
-  font-family: monospace;
 }
 
 html {
@@ -25,7 +29,13 @@ body {
   margin: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3,
+p,
+a,
+input {
+  font-family: 'PitchLight', monospace;
   font-weight: 100;
 }
 
