@@ -8,6 +8,8 @@
     {% include social-headers.html %}
   </head>
   <body>
+    {% include tweet-button.html %}
+
     {{ content }}
     <script src={{ 'scripts/main.js' | prepend: site.baseurl }}></script>
   </body>

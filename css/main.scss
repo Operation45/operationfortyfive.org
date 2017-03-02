@@ -12,6 +12,7 @@ $breakpoint: 650px;
   src: url($baseurl + '/fonts/Pitch-Light.otf') format('opentype');
 }
 
+
 * {
   box-sizing: border-box;
 }
@@ -41,5 +42,16 @@ input {
   font-weight: 100;
 }
 
+
+a, a:visited {
+  color: #295882;
+  text-decoration: none;
+}
+a:hover {
+  color: #29827f;
+  text-decoration: underline;
+}
+
 @import 'page';
 @import 'signup';
+@import 'about';
