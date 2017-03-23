@@ -1,6 +1,6 @@
 ---
-layout: privacy
-permalink: /privacy
+layout: page
+permalink: /privacy/
 ---
 
 # Privacy Policy

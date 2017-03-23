@@ -1,6 +1,6 @@
 ---
-layout: about
-permalink: /about
+layout: page
+permalink: /about/
 ---
 
 # About Us

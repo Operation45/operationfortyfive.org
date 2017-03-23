@@ -11,6 +11,12 @@
     {% include tweet-button.html %}
 
     {{ content }}
-    <script src={{ 'scripts/main.js' | prepend: site.baseurl }}></script>
+    <script src='https://js.stripe.com/v3/'></script>
+    <script src={{ '/scripts/promise.min.js' | prepend: site.baseurl }}></script>
+
+    {% for script in page.scripts %}
+      <script src='{{ site.baseurl }}/scripts/{{ script }}'></script>
+    {% endfor %}
+
   </body>
 </html>
