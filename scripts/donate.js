@@ -1,18 +1,11 @@
 (function(window) {
-  var stripe = Stripe('pk_test_KYRURBgo7mqY51cJWF8cpQTH')
+  var stripe = Stripe('pk_test_T6xUCdTb97PGVDNT5wwtP2oB')
   var elements = stripe.elements()
   var $form = document.querySelector('#donate-form-container')
   var $formMsg = document.querySelector('#donate-form-msg')
 
-  var style = {
-    base: {
-      fontSize: '16px',
-      lineHeight: '48px'
-    }
-  }
-
-  var card = elements.create('card', style)
-  card.mount('#donate-form')
+  var card = elements.create('card')
+  card.mount('#stripe-target')
 
   card.addEventListener('change', function(ev) {
     if (ev.error) {
@@ -23,28 +16,55 @@
   })
 
   $form.addEventListener('submit', function(ev) {
+    var amount = $form.querySelector('#amount').value
+    var email = $form.querySelector('#email').value
+    var monthly = $form.querySelector('#monthly').checked
+
     ev.preventDefault()
     stripe.createToken(card).then(function(result) {
       console.log('result', result)
       if (result.error) {
-        // Inform the user if there was an error
-        $formMsg.textContent = result.error.message
+        showError(result.error.message)
       } else {
-        // Send the token to your server
-        stripeTokenHandler(result.token)
+        submit({
+          amount: +amount,
+          email: email,
+          monthly: monthly,
+          token: result.token.id
+        })
       }
     })
   })
 
-  function stripeTokenHandler(token) {
-  // Insert the token ID into the form so it gets submitted to the server
-  var hiddenInput = document.createElement('input');
-  hiddenInput.setAttribute('type', 'hidden');
-  hiddenInput.setAttribute('name', 'stripeToken');
-  hiddenInput.setAttribute('value', token.id);
-  $form.appendChild(hiddenInput);
+  function showError(msg) {
+    $formMsg.textContent = msg
 
-  // Submit the form
-  $form.submit();
-}
+    console.error(msg)
+  }
+
+  function showSuccess(msg) {
+    $form.querySelector('#donate-form').style.display = 'none'
+    $form.querySelector('button').disabled = true
+    $formMsg.textContent = 'Thank you for your support'
+
+    debugger
+  }
+
+  function submit(body) {
+    var api = 'https://operation45-donate.herokuapp.com/donate'
+    var payload = {
+      method: 'POST',
+      body: JSON.stringify(body),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    return fetch(api, payload).then(res => {
+      if (res.status === 200) return showSuccess()
+      throw new Error({ status: res.status, statusText: res.statusText })
+    }).catch(err => {
+      showError(err)
+    })
+  }
+
 })(window)

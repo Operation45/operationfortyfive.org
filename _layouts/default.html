@@ -12,6 +12,7 @@
 
     {{ content }}
     <script src='https://js.stripe.com/v3/'></script>
+    <script src={{ '/scripts/fetch.js' | prepend: site.baseurl }}></script>
     <script src={{ '/scripts/promise.min.js' | prepend: site.baseurl }}></script>
 
     {% for script in page.scripts %}

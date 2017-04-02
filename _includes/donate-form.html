@@ -1,5 +1,13 @@
-<form id='donate-form-container' action='https://operation45-donate.herokuapp.com/donate'>
+<form id='donate-form-container'>
   <div id='donate-form-msg'></div>
-  <div id="donate-form"></div>
+  <div id='donate-form'>
+    <label for='email'>Email address</label>
+    <input type='email' name='email' id='email' value='yo@example.com'>
+    <label for='amount'>Donation amount</label>
+    <input type='number' name='amount' id='amount' value='10'>
+    <label for='monthly'>Donate every month?</label>
+    <input type='checkbox' name='monthly' id='monthly' checked='true'>
+    <div id="stripe-target"></div>
+  </div>
   <button>Donate</button>
 </form>
