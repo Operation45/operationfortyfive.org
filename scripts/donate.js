@@ -4,19 +4,15 @@
   var $form = document.querySelector('#donate-form-container')
   var $formMsg = document.querySelector('#donate-form-msg')
 
-  var classes = {
-    base: 'input'
-  }
-  var style = {
-    base: {
+  var opts = {
+    classes: {
+      base: 'input'
+    },
+    style: {
       color: 'white',
       fontFamily: '"PitchLight", monospace',
       fontSize: '1.3rem'
     }
-  }
-  var opts = {
-    classes: classes,
-    style: style
   }
 
   var card = elements.create('card', opts)
@@ -24,9 +20,9 @@
 
   card.addEventListener('change', function(ev) {
     if (ev.error) {
-      $formMsg.textContent = ev.error.message
+      showError(ev.error.message)
     } else {
-      $formMsg.textContent = ''
+      clearMsg()
     }
   })
 
@@ -51,6 +47,10 @@
     })
   })
 
+  function clearMsg() {
+    $formMsg.textContent = ''
+  }
+
   function showError(msg) {
     $formMsg.textContent = msg
 
@@ -59,7 +59,7 @@
 
   function showSuccess(msg) {
     $form.querySelector('#donate-form').style.display = 'none'
-    $form.querySelector('button').disabled = true
+    $form.querySelector('input[type="submit"]').disabled = true
     $formMsg.textContent = msg || 'Thank you for your support'
   }
 
