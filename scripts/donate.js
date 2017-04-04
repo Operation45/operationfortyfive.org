@@ -1,10 +1,25 @@
 (function(window) {
-  var stripe = Stripe('pk_test_T6xUCdTb97PGVDNT5wwtP2oB')
+  var stripe = Stripe('pk_test_KYRURBgo7mqY51cJWF8cpQTH')
   var elements = stripe.elements()
   var $form = document.querySelector('#donate-form-container')
   var $formMsg = document.querySelector('#donate-form-msg')
 
-  var card = elements.create('card')
+  var classes = {
+    base: 'input'
+  }
+  var style = {
+    base: {
+      color: 'white',
+      fontFamily: '"PitchLight", monospace',
+      fontSize: '1.3rem'
+    }
+  }
+  var opts = {
+    classes: classes,
+    style: style
+  }
+
+  var card = elements.create('card', opts)
   card.mount('#stripe-target')
 
   card.addEventListener('change', function(ev) {
@@ -45,9 +60,7 @@
   function showSuccess(msg) {
     $form.querySelector('#donate-form').style.display = 'none'
     $form.querySelector('button').disabled = true
-    $formMsg.textContent = 'Thank you for your support'
-
-    debugger
+    $formMsg.textContent = msg || 'Thank you for your support'
   }
 
   function submit(body) {
@@ -59,6 +72,7 @@
         'Content-Type': 'application/json'
       }
     }
+
     return fetch(api, payload).then(res => {
       if (res.status === 200) return showSuccess()
       throw new Error({ status: res.status, statusText: res.statusText })

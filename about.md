@@ -5,7 +5,7 @@ permalink: /about/
 
 # About Us
 
-#### Operation 45: Transparency and Accountability for the Administration of Donald J. Trump, the 45th President of the United States.
+**Operation 45: Transparency and Accountability for the Administration of Donald J. Trump, the 45th President of the United States.**
 
 Described by The Nation as "[a ray of hope in these dark political times](https://www.thenation.com/article/your-guide-to-the-sprawling-new-anti-trump-resistance-movement/)", Operation 45 is a 501(c)(3) charitable organization founded by "[transparency luminaries](https://www.gofundme.com/operation-45)" [Ryan Shapiro](https://twitter.com/_rshapiro) (MIT/Harvard) and [Jeffrey Light](https://twitter.com/_lightlaw). Our mission is the aggressive pursuit of governmental transparency in the service of democracy. Most immediately, Operation 45 is dedicated to ensuring transparency and accountability for the Trump/Pence administration.
 
@@ -24,7 +24,7 @@ Fortunately, liberating government documents against powerful opposition is what
 
 ## Ryan Shapiro
 
-![Ryan Shapiro](images/ryan-shapiro.jpg)
+![Ryan Shapiro](/images/ryan-shapiro.jpg)
 
 **President [Ryan Shapiro](https://twitter.com/_rshapiro)** is a Ph.D. candidate in the Department of Science, Technology, and Society (HASTS) at the Massachusetts Institute of Technology, as well as a Research Affiliate at the Berkman Klein Center for Internet & Society at Harvard University. Shapiro is an historian of national security, the policing of dissent, and governmental transparency. Shapiro is widely known as a leading expert on the Freedom of Information Act (FOIA).
 
@@ -32,12 +32,12 @@ Fortunately, liberating government documents against powerful opposition is what
 
 ## Jeffrey Light
 
-![Jeffrey Light](images/jeffrey-light.jpg)
+![Jeffrey Light](/images/jeffrey-light.jpg)
 
 **Legal Director [Jeffrey Light](https://twitter.com/_lightlaw)** is a Washington, D.C.-based FOIA specialist attorney. Light is an NLG member who received his JD from Georgetown Law, as well as an MS in Bioinformatics from Brandeis University. Beyond his expertise in FOIA matters, Light also has extensive experience in activist defense and First Amendment law, as well as police misconduct, prisoner abuse, LGBT, and civil rights law. Light is widely regarded as among the best FOIA attorneys in the country.
 
 For his legal work, Light has received awards from the Bill of Rights Defense Committee and the Washington Peace Center.
 
-#### Democracy cannot meaningfully function without an informed citizenry, and such a citizenry is impossible without broad public access to information about the operations of government. If our government is to be accountable to the people, Donald Trump must not be allowed to conduct his presidency from the shadows. Help us shine the light.
+**Democracy cannot meaningfully function without an informed citizenry, and such a citizenry is impossible without broad public access to information about the operations of government. If our government is to be accountable to the people, Donald Trump must not be allowed to conduct his presidency from the shadows. Help us shine the light.**
 
 *We are a 501(c)(3) non-profit charitable organization dedicated to governmental transparency in the service of democracy. Our tax ID number is 81-4440045. Your gift is tax-deductible to the full extent provided by law.*
