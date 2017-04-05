@@ -1,4 +1,52 @@
 #donate-form-container {
   margin: 0 auto;
-  width: 70%;
+  width: 90%;
+  padding: 2rem;
+  border: solid 1px;
+
+  #donate-form label {
+    display: inline;
+  }
+
+  input[id="amount"] {
+      display: inline !important;
+      width: auto;
+  }
+
+  #donationsuggestions label  {
+    font-size: .8rem;
+  }
+  #donate-form {
+    input[type="radio"]{
+      visibility:hidden;
+    }
+    ul{
+      list-style: none;
+      text-align: center;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    ul li {
+      margin-top:1rem;
+      display: inline-block;
+      font-size: 1rem;
+
+    }
+
+    input[type="radio"] + label {
+      background-color: #c5c2c2;
+      border: none;
+      padding: 1rem;
+      color: #b5b2b2;
+    }
+    input[type="radio"]:checked + label {
+      background-color: #676565;
+      border: 1px solid #000000;
+      color: #c5c2c2;
+    }
+  }
+
+
+
 }

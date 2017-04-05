@@ -1,60 +1,42 @@
-<style>
-
-@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,700');
-@import url('//fonts.googleapis.com/css?family=Slabo+27px');
-
-  body {
-    align-items: flex-start;
-    padding-top: 3rem;
-  }
-
-  .page {
-    position: relative;
-  }
-
-  a[href='/'] {
-    color: black;
-    font-size: 1.3rem;
-    font-weight: 900;
-    position: absolute;
-    right: 2rem;
-    top: 2rem;
-  }
-</style>
-
 <form id='donate-form-container'>
   <div id='donate-form-msg'></div>
   <div id='donate-form'>
 
-    <h2>donation type</h2>
-    <input type="radio" name="donationfrequency" id="donationfrequency-onetime" value="onetime" checked >
-    <label for="donationfrequency-onetime" onclick=""> One time donation</label>
-    <input type="radio" name="donationfrequency" id="donationfrequency-monthly" value="monthly" >
-    <label for="donationfrequency-monthly" onclick="">Monthly</label>
-
+<h2>Donate now</h2>
+    <ul id="donationsuggestions">
+      <li><input type="radio" name="donationsuggestionamt" id="10bux" value="10" /><label for="10bux">$10</label>
+      </li><li><input type="radio" name="donationsuggestionamt" id="20bux" value="20" /><label for="20bux">$20</label>
+      </li><li><input type="radio" name="donationsuggestionamt" id="45bux" value="45" checked /><label for="45bux">$45</label>
+      </li><li><input type="radio" name="donationsuggestionamt" id="100bux" value="100" /><label for="100bux">$100</label>
+      </li><li><input type="radio" name="donationsuggestionamt" id="250bux" value="250" /><label for="250bux">$250</label>
+      </li><li><input type="radio" name="donationsuggestionamt" id="otherbux" value="10" /><label for="otherbux">Other Amount</label>
+      </li>
+    </ul>
+    <br>
 
     <label for='amount'>Donation amount</label>
-    <input type='number' name='amount' id='amount' value='45' min='1' required>
-    <label for='monthly'>Make it a monthly donation?</label>
-    <input type='checkbox' name='monthly' id='monthly'>
-    <label for='email'>Email address</label>
-    <input type='email' name='email' id='email' placeholder='email address' required>
+      <span class="currencyinput">$
+        <input type='number' name='amount' id='amount' value='45' min='1' required>
+      </span>
+
+
+    <!-- <label for='monthly'>Make it a monthly donation?</label>
+    <input type='checkbox' name='monthly' id='monthly'> -->
+    <br>
+    <div class="donationfrequency">
+      <ul>
+        <li><input type="radio" name="donationfrequency" id="donationfrequency-onetime" value="onetime" checked >
+        <label for="donationfrequency-onetime"  onclick=""> One time donation</label>
+        </li>
+        <li><input type="radio" name="donationfrequency" id="donationfrequency-monthly" value="monthly" >
+        <label for="donationfrequency-monthly" onclick="">Monthly donation</label></li>
+      </ul>
+    </div>
+
+    <h3>Credit Card:</h3>
     <div id="stripe-target"></div>
-
-    <h2>Donation Amount</h2>
-
-    <input type="radio" name="donationamount" id="donationamount-5" value="5" checked >
-      <label for="donationamount-5" onclick="">$5</label>
-    <input type="radio" name="donationamount" id="donationamount-10" value="10" >
-      <label for="donationamount-10" onclick="">$10</label>
-    <input type="radio" name="donationamount" id="donationamount-20" value="25" >
-      <label for="donationamount-20" onclick="">$20</label>
-    <input type="radio" name="donationamount" id="donationamount-50" value="50" >
-      <label for="donationamount-50" onclick="">$50</label>
-    <input type="radio" name="donationamount" id="donationamount-100" value="100" >
-      <label for="donationamount-100" onclick="">$100</label>
-    <input type="radio" name="donationamount" id="donationamount-other" value="other" >
-      <label for="donationamount-other" onclick="">Other Amount</label>
+      <label for='email'>Email address</label>
+      <input type='email' name='email' id='email' placeholder='email address' required>
 
   </div>
   <input type='submit' value='donate' class='button'>
