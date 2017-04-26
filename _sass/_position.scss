@@ -4,3 +4,7 @@
 .bottom1 { bottom: 1rem; }
 
 .relative { position: relative; }
+
+@media all and (max-width: $breakpoint) {
+  .sm-relative { position: relative; }
+}

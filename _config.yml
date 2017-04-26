@@ -8,3 +8,6 @@ facebook: ''
 
 excludes:
 - README.md
+
+gems:
+  - octopress-autoprefixer

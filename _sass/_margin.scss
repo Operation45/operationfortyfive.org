@@ -4,3 +4,8 @@
 .mt1 { margin-top: 1rem; }
 .mt2 { margin-top: 2rem; }
 .mt3 { margin-top: 3rem; }
+
+@media all and (max-width: $breakpoint) {
+  .sm-mt1 { margin-top: 1rem; }
+  .sm-mt2 { margin-top: 2rem; }
+}

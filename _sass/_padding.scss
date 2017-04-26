@@ -3,3 +3,7 @@
 .p2 { padding: 2rem; }
 
 .pl2 { padding-left: 2rem; }
+
+@media all and (max-width: $breakpoint) {
+  .sm-p0 { padding: 0; }
+}
