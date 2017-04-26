@@ -1,42 +1,6 @@
-input {
-  display: block;
-  margin-top: .3rem;
-  width: 100%;
-}
-
-label {
-  display: none;
-}
-
-input[type="email"],
-input[type="number"],
-.input {
-  background-color: black;
-  border: 1px solid white;
-  color: white;
-  font-family: 'PitchLight', monospace;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  padding: 1rem .5rem;
-  width: 100%;
-}
-
-input[type="checkbox"] {
-  margin-bottom: 1.2rem;
-}
-
-input[type="submit"] {
-  background-color: black;
-  border: 1px solid white;
-  border-radius: 0;
-  color: white;
-  font-family: 'PitchLight', monospace;
-  font-size: 1rem;
-  padding: .7rem .3rem;
-}
-
 input[type="submit"]:hover {
   background-color: #333;
+  border-color: black;
   color: lightgrey;
   cursor: pointer;
 }

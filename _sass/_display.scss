@@ -1,0 +1,16 @@
+.block { display: block; }
+.flex { display: flex; }
+.hide { display: none; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+
+.flex-col { flex-direction: column; }
+.flex-grow { flex-grow: 1; }
+.align-center { align-items: center; }
+.justify-center { justify-content: center; }
+
+@media all and (max-width: $breakpoint) {
+  .sm-flex-col { flex-direction: column; }
+
+  .sm-align-stretch { align-items: stretch; }
+}

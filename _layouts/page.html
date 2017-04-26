@@ -2,9 +2,15 @@
 layout: default
 ---
 
-<div class='page'>
+<div class='bg-gray page'>
   <div class='title'>
-    <h1>Operation 45</h1>
+    <h1 class='right'>
+      <a class='black monospace no-decoration' href={{ '/' | prepend: site.baseurl }}>
+        Operation 45
+      </a>
+    </h1>
   </div>
-  {{ content }}
+  <div class='black serif'>
+    {{ content }}
+  </div>
 </div>

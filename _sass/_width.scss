@@ -1,0 +1,9 @@
+.width38 { width: 38rem; }
+
+.width-80 { width: 80%; }
+.width-90 { width: 90%; }
+.width-100 { width: 100%; }
+
+@media all and (max-width: $breakpoint) {
+  .sm-width-100 { width: 100%; }
+}

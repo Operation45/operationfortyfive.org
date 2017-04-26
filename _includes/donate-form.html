@@ -1,45 +1,36 @@
-<form id='donate-form-container'>
+<form id='donate-form-container' class='border mx-auto p2 width-90'>
   <div id='donate-form-msg'></div>
   <div id='donate-form'>
+    <h2 class='monospace'>Donate now</h2>
 
-<h2>Donate now</h2>
-    <!-- <ul id="donationsuggestions">
-      <li><input type="radio" name="donationsuggestionamt" id="10bux" value="10" /><label for="10bux">$10</label>
-      </li><li><input type="radio" name="donationsuggestionamt" id="20bux" value="20" /><label for="20bux">$20</label>
-      </li><li><input type="radio" name="donationsuggestionamt" id="45bux" value="45" checked /><label for="45bux">$45</label>
-      </li><li><input type="radio" name="donationsuggestionamt" id="100bux" value="100" /><label for="100bux">$100</label>
-      </li><li><input type="radio" name="donationsuggestionamt" id="250bux" value="250" /><label for="250bux">$250</label>
-      </li><li><input type="radio" name="donationsuggestionamt" id="otherbux" value="10" /><label for="otherbux">Other Amount</label>
-      </li>
-    </ul>
-    <br> -->
-
-    <label for='amount'>Donation amount</label>
-      <span class="currencyinput">$
-        <input type='number' name='amount' id='amount' value='45' min='1' required>
-      </span>
-
-
-    <!-- <label for='monthly'>Make it a monthly donation?</label>
-    <input type='checkbox' name='monthly' id='monthly'> -->
-    <br>
-    <div class="donationfrequency">
-      <ul>
-        <li><input type="radio" name="donationfrequency" id="donationfrequency-onetime" value="onetime" checked >
-        <label for="donationfrequency-onetime"  onclick=""> One time donation</label>
-        </li>
-        <li><input type="radio" name="donationfrequency" id="donationfrequency-monthly" value="monthly" >
-        <label for="donationfrequency-monthly" onclick="">Monthly donation</label></li>
-      </ul>
+    <div class='flex sm-flex-col'>
+      <label class='flex-grow monospace' for='amount'>Donation amount</label>
+      <div class='relative us-currency'>
+        <input type='number' class='bg-black border-none monospace ptiny pl2 white width-100' name='amount' id='amount' value='45' min='1' required>
+      </div>
     </div>
 
-    <h3>Credit Card:</h3>
-    <div id="stripe-target"></div>
-      <label for='email'>Email address</label>
-      <input type='email' name='email' id='email' placeholder='email address' required>
+    <div class='flex mt1'>
+      <div class='flex-grow'>
+          <input type="radio" name="donate-frequency" id="donate-frequency-onetime" value="onetime" checked >
+          <label class='inline-block monospace' for="donate-frequency-onetime"  onclick=""> One time donation</label>
+      </div>
+      <div class='flex-grow'>
+          <input type="radio" name="donate-frequency" id="donate-frequency-monthly" value="monthly" >
+          <label class='inline-block monospace' for="donate-frequency-monthly" onclick="">Monthly donation</label>
+      </div>
+    </div>
+
+    <div class='flex flex-col mt2'>
+      <label class='flex-grow monospace'>Credit Card</label>
+      <div id='stripe-target' class='bg-white ptiny'></div>
+    </div>
+
+    <div class='flex flex-col mt2'>
+      <label class='flex-grow monospace' for='email'>Email address</label>
+      <input type='email' class='monospace ptiny' name='email' id='email' placeholder='Email address' required>
+    </div>
 
   </div>
-  <input type='submit' value='donate' class='button'>
+  <input class='bg-black border border-white color monospace mt2 p1 white width-100' type='submit' value='Donate'>
 </form>
-<br>
-<img src="/images/mcvsax_acc_opt_hrz_144_1x.png" alt="" style="width:144px; padding: 5px;">

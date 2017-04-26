@@ -5,7 +5,10 @@
 @import 'reset';
 
 $baseurl: '{{ site.baseurl }}';
+$border-color: white;
+$border-width: 1px;
 $breakpoint: 650px;
+$monospace: 'PitchLight', monospace;
 
 @font-face {
   font-family: 'PitchLight';
@@ -28,12 +31,23 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: monospace;
+  font-family: $monospace;
   margin: 0;
 }
 
-@import 'donate';
+@import 'align';
+@import 'borders';
+@import 'colors';
+@import 'display';
+@import 'fonts';
 @import 'forms';
-@import 'navlinks';
+@import 'margin';
+@import 'padding';
+@import 'position';
+@import 'text';
+@import 'width';
+
+@import 'donate';
+@import 'links';
 @import 'page';
 @import 'signup';
