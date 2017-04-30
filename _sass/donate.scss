@@ -8,10 +8,6 @@
     top: 15%;
   }
 
-  input[type="radio"]{
-    visibility:hidden;
-  }
-
   input[type="radio"] + label {
     background-color: #c5c2c2;
     border-width: 1px;
@@ -26,5 +22,9 @@
     background-color: #333;
     border-color: #000000;
     color: #c5c2c2;
+  }
+
+  @media all and (max-width: $breakpoint) {
+    label { font-size: .9rem; }
   }
 }

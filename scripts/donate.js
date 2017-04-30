@@ -5,6 +5,7 @@
   var $formMsg = document.querySelector('#donate-form-msg')
 
   var opts = {
+    hideIcon: false,
     style: {
       base: {
         fontFamily: 'monospace',
@@ -14,8 +15,12 @@
     }
   }
 
-  var card = elements.create('card', opts)
-  card.mount('#stripe-target')
+  var card = elements.create('cardNumber', opts)
+  var cardCvc = elements.create('cardCvc', opts)
+  var cardExpiry = elements.create('cardExpiry', opts)
+  card.mount('#card-number')
+  cardCvc.mount('#card-cvc')
+  cardExpiry.mount('#card-expiry')
 
   card.addEventListener('change', function(ev) {
     if (ev.error) {
@@ -33,7 +38,7 @@
     var freq = $form.querySelector('[name="donate-frequency"]:checked').value
 
     stripe.createToken(card).then(function(result) {
-      console.log('result', result)
+      // console.log('result', result)
       if (result.error) {
         showError(result.error.message)
       } else {
