@@ -38,7 +38,7 @@
     var freq = $form.querySelector('[name="donate-frequency"]:checked').value
 
     stripe.createToken(card).then(function(result) {
-      // console.log('result', result)
+      console.log('result', result)
       if (result.error) {
         showError(result.error.message)
       } else {
