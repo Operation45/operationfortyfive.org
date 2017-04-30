@@ -78,8 +78,6 @@
       }
     }
 
-    debugger;
-
     return fetch(api, payload).then(res => {
       if (res.status === 200) return showSuccess()
       throw new Error({ status: res.status, statusText: res.statusText })
