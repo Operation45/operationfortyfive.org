@@ -6,11 +6,17 @@
 
 .flex-col { flex-direction: column; }
 .flex-grow { flex-grow: 1; }
+
 .align-center { align-items: center; }
+.align-end { align-items: flex-end; }
 .justify-center { justify-content: center; }
+.justify-space-between { justify-content: space-between; }
+
+.flex-basis-40 { flex-basis: 40%; }
 
 @media all and (max-width: $breakpoint) {
   .sm-flex-col { flex-direction: column; }
+  .sm-flex-row { flex-direction: row; }
 
   .sm-align-stretch { align-items: stretch; }
 }
